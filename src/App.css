@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,7 @@
   to {
     transform: rotate(360deg);
   }
+} */
+.content {
+  margin-top: 80px; /* Adjust based on your navbar height */
 }

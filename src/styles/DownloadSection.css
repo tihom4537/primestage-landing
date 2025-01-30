@@ -1,0 +1,101 @@
+.download-section {
+    display: flex;
+    justify-content: space-between; /* Space between child containers */
+    align-items: flex-start; /* Align items to the top */
+    padding: 2rem;
+    background-color: black; /* Light background for the section */
+    gap: 2rem;
+    box-sizing: border-box; /* Ensure padding is included in the total width */
+}
+h2{
+    color:white;
+    background-color: black;
+}
+
+.download-buttons-container,
+.mobile-photo-container {
+    flex: 1; /* Both containers take up equal space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-buttons-container {
+    flex: 1; /* Take up 50% of the space */
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 1rem;
+    max-width: 50%; /* Ensure this container takes up to 50% */
+}
+
+.download-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px; /* Adjust max width of buttons */
+    text-align: center;
+}
+
+.download-button img {
+    width: 150px; /* Adjust image size as needed */
+    height: auto;
+    margin-right: 0.5rem; /* Space between image and text */
+    border-radius: 50%;
+}
+
+.download-button.app-store {
+    background-color: #252627; /* App Store blue */
+}
+
+.download-button.app-store:hover {
+    background-color: #252627; /* Darker blue on hover */
+}
+
+.download-button.google-play {
+    background-color: #252627; /* Google Play green */
+}
+
+.download-button.google-play:hover {
+    background-color: #252627; /* Darker green on hover */
+}
+
+.mobile-photo-container {
+    flex: 1; /* Take up 50% of the space */
+    max-width: 50%; /* Ensure this container takes up to 50% */
+}
+
+.mobile-photo {
+    width: 100%; /* Full width of its container */
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .download-section {
+        flex-direction: column; /* Stack child containers vertically on small screens */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+    }
+
+    .download-buttons-container,
+    .mobile-photo-container {
+        max-width: 100%; /* Ensure containers are responsive */
+        flex: 1; /* Allow containers to grow if needed */
+    }
+
+    .download-buttons-container {
+        margin-bottom: 1rem; /* Add space above buttons container */
+    }
+
+    .download-button img {
+        width: 100px; /* Adjust image size for mobile view */
+        margin-right: 0; /* Remove space between image and text for mobile view */
+    }
+}

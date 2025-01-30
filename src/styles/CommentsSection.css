@@ -1,0 +1,110 @@
+.comments-section {
+    overflow: hidden; /* Hide scrollbar */
+    position: relative; /* Position relative for handling animation */
+    background-color: black; /* Light background for the section */
+    padding: 2rem; /* Increased padding for more space */
+    height: 400px; /* Height to accommodate two rows of comments */
+}
+
+.comments-container {
+    display: flex;
+    color: white;
+    background-color: black;
+    flex-direction: column; /* Stack rows vertically */
+    height: 100%; /* Full height of the comments-section */
+    position: relative;
+}
+
+.comments-row {
+    display: flex;
+   
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide scrollbar */
+    padding: 0 1rem; /* Padding on left and right */
+    margin-bottom: 2rem; /* Space between rows */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.comments-row:nth-child(1) {
+    animation: scroll 20s linear infinite; /* Animation for the upper row */
+}
+
+.comments-row:nth-child(2) {
+    animation: scroll 20s linear infinite; /* Animation for the lower row */
+    animation-delay: .75s; /* Start 1 second later */
+}
+
+.comment {
+    display: flex;
+    
+    align-items: center;
+    padding: 1rem; /* Adjusted padding to prevent overflow */
+    margin-right: 2rem; /* Space between comments */
+    background-color: black;
+    border-radius: 10px; /* Rounder corners for comments */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-size: 1rem; /* Adjusted font size */
+    font-weight: 400;
+    color: white;
+    background-color: rgb(55, 54, 54);
+    min-width: 250px; /* Ensure comments have a minimum width */
+    max-width: 300px; /* Ensure comments do not exceed maximum width */
+    text-align: left; /* Align text to the left */
+    height: 100px; /* Fixed height for the comment container */
+    display: flex; /* Use flexbox for content alignment */
+    flex-direction: row; /* Align items in a row */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    overflow: hidden; /* Hide overflow text */
+}
+
+.comment-logo {
+    width: 60px; /* Size of the logo */
+    height: 60px;
+    border-radius: 50%; /* Round logo */
+    margin-right: 1rem; /* Space between logo and text */
+}
+
+.comment-text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allow text to take up remaining space */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to off-screen to the left */
+    }
+}
+
+@media (max-width: 768px) {
+    .comments-section {
+        padding: 1rem; /* Adjust padding for mobile view */
+        height: 300px; /* Adjust height for smaller screens */
+        
+    }
+
+    .comments-row {
+        padding: 0 0.5rem; /* Adjust padding for smaller screens */
+        margin-bottom: 1rem; /* Adjust space between rows for mobile view */
+    }
+
+    .comment {
+        font-size: 0.875rem; /* Adjust font size for mobile view */
+        padding: 0.75rem; /* Adjust padding for mobile view */
+        min-width: 180px; /* Adjust minimum width for smaller screens */
+        max-width: 220px; /* Adjust maximum width for smaller screens */
+        height: 80px; /* Adjust height for smaller screens */
+    }
+
+    .comment-logo {
+        width: 50px; /* Adjust logo size for mobile view */
+        height: 50px;
+        color: white;
+    }
+}

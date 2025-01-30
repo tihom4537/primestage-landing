@@ -1,0 +1,18 @@
+.combined-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.rotating-phones-container,
+.features-container {
+    width: 50%;
+    padding: 0 20px; /* Optional: Adjust padding as needed */
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+.features-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the features vertically */
+}

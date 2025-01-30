@@ -1,0 +1,152 @@
+/* src/components/WhyTrinkerr.css */
+.why-trinkerr {
+    padding: 50px 0;
+    background-color: black;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+.why-trinkerr h2 {
+    font-family: Outfit, sans-serif;
+    font-size: 4.5rem;
+    margin-bottom: 30px;
+    animation: slideInDown 0.8s ease-out;
+}
+
+.reasons {
+    color:white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 85%;
+    max-width: 1200px;
+    margin : 0 auto;
+}
+
+/* .reason {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 600px;
+    text-align: center;
+    animation: slideInUp 1s ease-out;
+} */
+
+/* src/components/WhyTrinkerr.css */
+.reason {
+    font-family: Outfit, sans-serif;
+    
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 100%;
+    text-align: center;
+    animation: slideInUp 1s ease-out;
+    position: relative; /* Make the reason element a positioning context */
+}
+
+.reason::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px; /* Adjust thickness of the line */
+    background-color: #6e8efb; /* Adjust color of the line */
+    margin-top: 20px; /* Space between the content and the line */
+    position: absolute;
+    bottom: -10px; /* Adjust this value to control the position of the line */
+    left: 0;
+    right: 0;
+}
+
+
+/* src/components/WhyTrinkerr.css */
+.reason h3 {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.icon {
+    width: 24px;  /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+
+
+.reason p {
+    
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Animations */
+/* @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+} */
+
+/* Responsive Styles */
+/* src/components/WhyTrinkerr.css */
+
+
+
+@media (min-width: 1200px) {
+    .reasons {
+        max-width: 85%; /* When the screen is very wide */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .reasons {
+        max-width: 75%; /* Medium screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .reasons {
+        max-width: 90%; /* Small screens like tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .reasons {
+        max-width: 95%; /* Very small screens like phones */
+    }
+
+    .reason {
+        padding: 15px;
+    }
+
+    .why-trinkerr h2 {
+        font-size: 2rem;
+    }
+
+    .reason h3 {
+        font-size: 1.2rem;
+    }
+
+    .reason p {
+        font-size: 0.9rem;
+    }
+}
+
+
+

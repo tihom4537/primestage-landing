@@ -1,0 +1,79 @@
+.benefits-section {
+    padding:150px;
+    width :100%;
+    margin: 0 auto;
+    padding: 13rem; 
+    background-color: black; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start with a slight offset */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transition for animation */
+}
+
+.benefits-section.animate {
+   
+    /* width :80%; */
+    opacity: 1; /* Show the section */
+    transform: translateY(0); /* Move to original position */
+    background-color: black;
+}
+
+.benefits-heading {
+    height:120px;
+    background-color: black;
+    font-size: 3.5rem; /* Large heading */
+    margin-bottom: 1.5rem; /* Space below heading */
+    text-align: center; /* Center align heading text */
+    color: white; /* Dark color for heading */
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start with a slight offset */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transition for animation */
+}
+
+.benefits-heading.animate-heading {
+    background-color: black;
+    opacity: 1; /* Show the heading */
+    transform: translateY(0); /* Move to original position */
+}
+
+.benefits-grid {
+    height : 450px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 2rem; /* Space between items */
+    font-size: large;
+    /* width:800px;
+    justify-content: center; */
+}
+
+.benefit-item {
+    background-color: black; /* White background for items */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 1rem; /* Padding inside items */
+    text-align: center; /* Center align text */
+    font-size: 1rem; /* Font size for text */
+    color: white; /* Text color */
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start with a slight offset */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    border: 5px solid #6a1b9a; /* Transition for animation */
+    border-radius: 5%;
+}
+
+.benefits-grid.animate-grid .benefit-item {
+    opacity: 1; /* Show items */
+    transform: translateY(0); /* Move to original position */
+}
+
+@media (max-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: 1fr; /* Single column layout on small screens */
+    }
+
+    .benefits-heading {
+        font-size: 1.5rem; /* Adjust heading size for small screens */
+    }
+}
+

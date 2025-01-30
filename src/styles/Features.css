@@ -1,0 +1,36 @@
+.features {
+    padding-top: 160px;
+    background: black;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.features .feature {
+    background: #8e8b8b;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 1rem;
+    opacity: 0; /* Start as invisible */
+    transform: translateY(30px); /* Start slightly below */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition */
+}
+
+.features .feature.visible {
+    opacity: 1; /* Make visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+.features .feature.hidden {
+    opacity: 0; /* Fade out */
+    transform: translateY(-30px); /* Move up while fading */
+}
+
+@media (max-width: 768px) {
+    .features {
+        padding: 2rem 0;
+    }
+}
